@@ -2,11 +2,6 @@ import java.util.Scanner;
 
 public class Practice {
     public static void isVowel(char ch) {
-//         if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'e' || ch == 'o' || ch == 'u'){
-//             System.out.println("This letter is the vowel");
-//         }
-//         else
-//             System.out.println("This letter is not a vowel");
 
         switch (ch) {
             case 'a':
