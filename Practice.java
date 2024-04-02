@@ -21,6 +21,23 @@ public class Practice {
         }
     }
 
+    /*--------------------------*/
+    FUNCTION TO FIND THATS A AN ALPAHBET OR NOT
+    /*--------------------------*/
+    
+    public static  void find_is_alphabet(char ch){
+        if((ch>=65 && ch<= 90)){
+            System.out.println("thats an alphabet and a uppercase letter");
+        }
+        else if((ch>=97 && ch<=122)){
+            System.out.println("thats an alphabet and a lowercase letter");
+        }
+        else {
+            System.out.println("not an alphabet");
+        }
+     }
+        
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int useropt = 1;
