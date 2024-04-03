@@ -21,39 +21,65 @@ public class Practice {
         }
     }
 
-    /*--------------------------*/
-    FUNCTION TO FIND THATS A AN ALPAHBET OR NOT
-    /*--------------------------*/
+    // FUNCTION TO FIND Type of character
     
-    public static  void find_is_alphabet(char ch){
-        if((ch>=65 && ch<= 90)){
-            System.out.println("thats an alphabet and a uppercase letter");
+  static String findTypeofCharacter(char ch) {
+        if (ch >= 65 && ch <= 90)
+            return "thats a Upper case Letter";
+
+        else if(ch >= 97 && ch<= 122)
+            return  "thats a lower case letter";
+        else if(ch>= 48 && ch<= 57)
+            return "Thats a number";
+        else
+            return "thats a special character";
+    }
+    // FUNCTION TO FIND odd or even
+  
+    String find_Even_or_Odd(int num){
+        if(num%2==0)
+            return  "thats  a even number";
+        else
+            return  "thats a odd Number";
+    }
+   
+    // FUNCTION to check palindrom number
+    public static String palindromeCheck(int Given_Number){
+       int temp_num = Given_Number;
+        int reversed=0;
+        while(Given_Number!=0){
+            int temp = Given_Number%10;  // we are getting unit digit of the number
+            reversed =( reversed *10 )+ temp;  // adding number to print as reverse order
+            Given_Number=Given_Number/10;  // getting remaining numbers rather than unit digit
         }
-        else if((ch>=97 && ch<=122)){
-            System.out.println("thats an alphabet and a lowercase letter");
+
+        if(temp_num == reversed){
+            return  "This is palindrome number";
         }
-        else {
-            System.out.println("not an alphabet");
+        else{
+           return  "not a palindrome";
+
         }
-     }
-        
+
+    }
+
+/*------------Reverse string--------------------*/
+
+     public static String reverseString(String s){
+
+        String rev="";
+        int length= s.length();
+        for (int i=length-1;i >=0;i--){
+            rev= rev+s.charAt(i);
+        }
+
+        return rev;
+
+    }
+
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int useropt = 1;
-        while (useropt != 0) {
-
-            System.out.println("Enter Character to find vowel or constant");
-            char given_char = sc.next().charAt(0);
-            isVowel(given_char);
-            System.out.println("enter 1 to continue and 0 to exit");
-            useropt = sc.nextInt();
-            if(useropt!=0){
-             continue;
-            }
-            else {
-                break;
-            }
+     
         }
-    }
+    
 }
