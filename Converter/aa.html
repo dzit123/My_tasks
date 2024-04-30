@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter</title>
+  <link href="./index.css" rel= "stylesheet" >
+</head>
+<body>
+   
+  <div class="container">
+   <input type="text" id ="textbox" placeholder="Enter values in Cm">
+   <input type="submit" id="button" onclick= convert() value="Convert">
+    <div id="result"></div>
+  </div>
+  <script>
+    function convert(){
+    let cmVal = Number(document.getElementById("textbox").value);
+    let inchValue= cmVal/2.54;
+   document.getElementById("result").innerHTML = inchValue.toFixed(2) + " inches";
+
+    }
+  </script>
+</body>
+</html>
